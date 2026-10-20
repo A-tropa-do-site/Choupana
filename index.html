@@ -479,73 +479,105 @@
       </div>
     </section>
 
-    <!-- ==================== 6. QUEM ESTÁ À FRENTE (DIAMOND STRIP + CARD FLUTUANTE) ==================== -->
+    <!-- ==================== 6. QUEM ESTÁ À FRENTE (MOSAICO ASSIMÉTRICO + CARD FLUTUANTE) ==================== -->
     <section id="lideranca" class="section-leadership">
+      <!-- Filtro SVG para cantos levemente suavizados dos polígonos -->
+      <svg width="0" height="0" style="position: absolute;">
+        <defs>
+          <filter id="round-corners">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+
       <div class="leadership-top-header">
         <h2 class="section-title">Quem faz a tradição acontecer todos os dias.</h2>
       </div>
 
-      <!-- Faixa Horizontal de Losangos (Diamond Strip) -->
-      <div class="diamond-strip-wrapper">
-        <div class="diamond-strip">
-          <!-- 1. Mestres da Brasa -->
-          <div class="diamond-item" data-title="Mestres da Brasa">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="Mestre churrasqueiro na brasa" class="diamond-img">
-            <span class="diamond-pill">Mestres da Brasa</span>
+      <!-- Mosaico Geométrico Assimétrico Recortado (Interlocking Clipped Shapes) -->
+      <div class="mosaic-strip-wrapper">
+        <div class="mosaic-strip">
+          <!-- Peça 1: Losango Grande Truncado à Direita -->
+          <div class="mosaic-item piece-1" data-title="Mestres da Brasa">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="Mestres da Brasa" class="mosaic-img">
+            <span class="mosaic-pill">Mestres da Brasa</span>
           </div>
 
-          <!-- 2. Cortes Selecionados -->
-          <div class="diamond-item" data-title="Cortes Selecionados">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" alt="Corte nobre grelhando" class="diamond-img">
-            <span class="diamond-pill">Cortes Selecionados</span>
+          <!-- Peça 2: Trapézio Superior Encaixado atrás do Card -->
+          <div class="mosaic-item piece-2" data-title="Cortes Selecionados">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" alt="Cortes Selecionados" class="mosaic-img">
+            <span class="mosaic-pill">Cortes Selecionados</span>
           </div>
 
-          <!-- 3. Gestão Familiar • Desde 1978 (Ativo por padrão) -->
-          <div class="diamond-item active" data-title="Gestão Familiar • Desde 1978">
-            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" alt="Chef finalizando prato de tradição" class="diamond-img">
-            <span class="diamond-pill">Gestão Familiar • Desde 1978</span>
+          <!-- Peça 3: Fatia Vertical Estreita com Topo Inclinado -->
+          <div class="mosaic-item piece-3" data-title="Rigor em Cada Receita">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Rigor em Cada Receita" class="mosaic-img">
+            <span class="mosaic-pill">Rigor em Cada Receita</span>
           </div>
 
-          <!-- 4. Rigor em Cada Receita -->
-          <div class="diamond-item" data-title="Rigor em Cada Receita">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Preparo artesanal do molho" class="diamond-img">
-            <span class="diamond-pill">Rigor em Cada Receita</span>
+          <!-- Peça 4: Pico Diagonal Central atrás da quina direita do Card -->
+          <div class="mosaic-item piece-4" data-title="Hospitalidade">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Hospitalidade" class="mosaic-img">
+            <span class="mosaic-pill">Hospitalidade</span>
           </div>
 
-          <!-- 5. Tradição na Pizzaria -->
-          <div class="diamond-item" data-title="Tradição na Pizzaria">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Pizza artesanal no forno" class="diamond-img">
-            <span class="diamond-pill">Tradição na Pizzaria</span>
+          <!-- Peça 5: Destaque Colorido à Direita do Card (Losango Assimétrico Recortado) -->
+          <div class="mosaic-item piece-5 active" data-title="Tradição na Pizzaria">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Tradição na Pizzaria" class="mosaic-img">
+            <span class="mosaic-pill">Tradição na Pizzaria</span>
           </div>
 
-          <!-- 6. A Rainha das Batidas -->
-          <div class="diamond-item" data-title="A Rainha das Batidas">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop" alt="Preparo das batidas clássicas" class="diamond-img">
-            <span class="diamond-pill">A Rainha das Batidas</span>
+          <!-- Peça 6: Fatia Vertical Estreita Inclinada (Par de Encaixe da Peça 5) -->
+          <div class="mosaic-item piece-6" data-title="A Rainha das Batidas">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop" alt="A Rainha das Batidas" class="mosaic-img">
+            <span class="mosaic-pill">A Rainha das Batidas</span>
           </div>
 
-          <!-- 7. Hospitalidade Guarulhense -->
-          <div class="diamond-item" data-title="Hospitalidade Guarulhense">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Equipe de salão recepcionando" class="diamond-img">
-            <span class="diamond-pill">Hospitalidade Guarulhense</span>
+          <!-- Peça 7: Losango Final na Extremidade Direita com Fade Out -->
+          <div class="mosaic-item piece-7" data-title="Gestão Familiar • Desde 1978">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" alt="Gestão Familiar" class="mosaic-img">
+            <span class="mosaic-pill">Gestão Familiar • Desde 1978</span>
           </div>
         </div>
       </div>
 
-      <!-- Card Flutuante Sobreposto -->
+      <!-- Card Flutuante Sobreposto + Assinatura Externa -->
       <div class="container leadership-card-container">
-        <div class="leadership-floating-card">
-          <span class="leadership-tag">Gestão & Tradição Familiar</span>
-          <p class="leadership-quote">
-            "Aqui não servimos apenas comida; recebemos cada cliente como quem recebe um amigo de longa data na sala de casa."
-          </p>
-          <p class="leadership-card-text">
-            Diferente de grandes redes impessoais, o Choupana mantém viva a presença calorosa de seus fundadores e mestres churrasqueiros. Cada corte que vai à brasa, cada molho de parmegiana que ferve e cada batida que é batida na coqueteleira passam por um crivo rigoroso de qualidade e respeito ao cliente de Guarulhos.
-          </p>
-          <div class="leadership-signature">
-            <div>
-              <div class="leadership-owner-name">Família Choupana & Equipe de Mestres</div>
-              <div class="leadership-owner-role">Mais de 40 colaboradores dedicados à sua experiência</div>
+        <div class="leadership-floating-wrapper">
+          <!-- Card Branco com Balão de Fala -->
+          <div class="leadership-floating-card">
+            <!-- Topo do Card: Tag + Paginação Minimalista -->
+            <div class="leadership-card-topbar">
+              <span class="leadership-tag">Gestão & Tradição Familiar</span>
+              <div class="leadership-card-pagination" aria-hidden="true">
+                <span class="dot active">•</span>
+                <span class="dash">▬</span>
+                <span class="dot">•</span>
+              </div>
+            </div>
+
+            <p class="leadership-quote">
+              "Aqui não servimos apenas comida; recebemos cada cliente como quem recebe um amigo de longa data na sala de casa."
+            </p>
+            <p class="leadership-card-text">
+              Diferente de grandes redes impessoais, o Choupana mantém viva a presença calorosa de seus fundadores e mestres churrasqueiros. Cada corte que vai à brasa, cada molho de parmegiana que ferve e cada batida que é batida na coqueteleira passam por um crivo rigoroso de qualidade e respeito ao cliente de Guarulhos.
+            </p>
+
+            <!-- Ponta de balão de fala (Speech bubble tail) -->
+            <div class="speech-bubble-tail"></div>
+          </div>
+
+          <!-- Assinatura Fora do Card (Abaixo à Esquerda) -->
+          <div class="leadership-signature-outside">
+            <div class="author-avatar-wrapper">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=120&auto=format&fit=crop" alt="Fundador Choupana" class="author-avatar">
+              <span class="author-badge-seal">★</span>
+            </div>
+            <div class="author-info">
+              <span class="author-name">Família Choupana & Equipe de Mestres</span>
+              <span class="author-role">Mais de 40 colaboradores dedicados à sua experiência</span>
             </div>
           </div>
         </div>

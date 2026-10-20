@@ -91,11 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. DIAMOND STRIP HOVER / CLICK INTERACTION
-  const diamondItems = document.querySelectorAll('.diamond-item');
-  diamondItems.forEach(item => {
+  // 6. MOSAIC STRIP HOVER / CLICK INTERACTION
+  const mosaicItems = document.querySelectorAll('.mosaic-item');
+  mosaicItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
-      diamondItems.forEach(d => d.classList.remove('active'));
+      mosaicItems.forEach(d => d.classList.remove('active'));
       item.classList.add('active');
     });
   });
