@@ -91,7 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. SMOOTH SCROLL PARA LINKS ÂNCORA
+  // 6. DIAMOND STRIP HOVER / CLICK INTERACTION
+  const diamondItems = document.querySelectorAll('.diamond-item');
+  diamondItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      diamondItems.forEach(d => d.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+
+  // 7. SMOOTH SCROLL PARA LINKS ÂNCORA
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
