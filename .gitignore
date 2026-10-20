@@ -1,0 +1,8 @@
+# Dependências e caches locais
+.impeccable/
+.taste-skill/
+findings*.txt
+findings*.json
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choupana Restaurante & Pizzaria — A Rainha das Batidas | Desde 1978 em Guarulhos</title>
+  <meta name="description" content="Quase 5 décadas de tradição em Guarulhos. Churrasco nobre, o famoso Filé Mignon à Parmegiana, Buffet completo no almoço, Pizzas artesanais, Espaço Kids e Estacionamento Gratuito.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23120E0C'/><rect x='4' y='4' width='92' height='92' fill='none' stroke='%23DFA252' stroke-width='6'/><text x='50%' y='68%' font-size='52' font-family='serif' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>C</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond (Elegância Gastronômica) + Work Sans (Legibilidade Humana) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== DRAWER LATERAL (OFF-CANVAS) ==================== -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="navDrawer" class="nav-drawer" style="color: #FAF8F5;" aria-label="Menu de Navegação Principal">
+    <div class="drawer-header">
+      <span class="drawer-title">Menu Choupana</span>
+      <button id="drawerClose" class="drawer-close" aria-label="Fechar Menu">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link">Início</a></li>
+      <li><a href="#tradicao" class="drawer-link">Nossa História</a></li>
+      <li><a href="#excelencia" class="drawer-link">Estrutura & Diferenciais</a></li>
+      <li><a href="#cardapio" class="drawer-link">Cardápio & Preços</a></li>
+      <li><a href="#lideranca" class="drawer-link">Quem Somos</a></li>
+      <li><a href="#familia" class="drawer-link">Espaço Kids & Salão</a></li>
+      <li><a href="#localizacao" class="drawer-link">Como Chegar</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p style="color: #FFFFFF; font-weight: 700; margin-bottom: 0.35rem;">Rua Força Pública, 345 – Centro</p>
+      <p>Guarulhos – SP • Tel: (11) 2440-0545</p>
+      <p style="color: var(--color-gold-border); margin-top: 0.5rem;">Desde 1978 em Guarulhos</p>
+    </div>
+  </aside>
+
+  <!-- ==================== 1. HEADER MINIMALISTA (TOPO DA PÁGINA: 68px de altura) ==================== -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Esquerda: Apenas Menu Hambúrguer Minimalista (3 linhas brancas finas) -->
+      <button id="drawerToggle" class="btn-hamburger" aria-label="Abrir Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Direita: Apenas botões de ação rápida no estilo retangular escuro transparente com borda grossa -->
+      <div class="nav-cta">
+        <a href="https://www.ifood.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-header">
+          Pedir Delivery
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20mesa%20no%20Choupana." target="_blank" rel="noopener noreferrer" class="btn btn-header btn-gold">
+          Reservar Mesa
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO SECTION CLEAN COM O SÍMBOLO SVG NO CENTRO (BARBACOA STYLE) ==================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-slider-bg">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop');"></div>
+      </div>
+      <!-- Overlay suave de 40% para a fotografia gastronômica ser a protagonista -->
+      <div class="hero-overlay"></div>
+
+      <!-- Composição Central Minimalista com Logotipo SVG Oficial Vazado -->
+      <div class="hero-brand-center">
+        <!-- Símbolo Oficial Choupana (Tronco Rústico Branco com Recorte Vazado) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" style="width: 400px; max-width: 82vw; height: auto; filter: drop-shadow(0 10px 28px rgba(0,0,0,0.65));" aria-label="Choupana">
+          <defs>
+            <filter id="wood-roughness" x="-5%" y="-5%" width="110%" height="110%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <mask id="choupana-cutout">
+              <path fill="#FFFFFF" d="M 155,22 C 175,20 198,35 225,45 C 295,55 435,58 515,45 C 545,38 565,28 575,35 C 582,42 562,54 552,58 C 565,62 572,72 560,82 C 548,88 545,98 562,102 C 572,106 565,118 552,122 C 562,132 582,148 575,155 C 568,160 552,148 542,145 C 558,162 585,180 582,188 C 575,195 545,172 515,165 C 455,158 395,162 355,165 C 348,150 338,145 335,148 C 332,152 342,162 345,168 C 275,170 245,178 215,178 C 165,178 95,172 68,165 C 52,158 52,140 68,134 C 82,130 92,126 92,122 C 78,122 52,118 52,106 C 52,96 78,94 88,90 C 72,88 50,82 52,68 C 54,56 82,60 98,60 C 78,50 60,40 64,30 C 70,22 105,36 142,42 C 162,44 170,38 152,32 C 140,28 142,23 155,22 Z" />
+              <path fill="#000000" d="M 115,52 C 135,48 165,50 185,54 C 165,60 135,58 115,52 Z" />
+              <path fill="#000000" d="M 272,62 C 295,60 322,62 342,66 C 320,72 292,70 272,62 Z" />
+              <ellipse fill="#000000" cx="465" cy="64" rx="11" ry="5" transform="rotate(-8 465 64)" />
+              <ellipse fill="#000000" cx="498" cy="70" rx="5" ry="3" />
+              <path fill="#000000" d="M 522,65 C 532,68 538,78 530,85 C 522,82 518,72 522,65 Z" />
+              <path fill="#000000" d="M 518,104 C 530,102 544,104 548,110 C 538,114 524,112 518,104 Z" />
+              <path fill="#000000" d="M 515,126 C 528,125 542,128 546,135 C 534,138 522,134 515,126 Z" />
+              <path fill="#000000" d="M 78,146 C 95,140 112,152 135,146 C 142,148 138,155 128,156 C 108,158 92,150 78,146 Z" />
+              <path fill="#000000" d="M 155,144 C 175,142 198,144 212,150 C 195,156 172,154 155,144 Z" />
+              <circle fill="#000000" cx="145" cy="158" r="4.5" />
+              <text x="305" y="132" fill="#000000" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-style="italic" font-size="66" text-anchor="middle" letter-spacing="3" transform="rotate(-2 305 115)">CHOUPANA</text>
+            </mask>
+          </defs>
+          <rect x="0" y="0" width="620" height="220" fill="#FFFFFF" mask="url(#choupana-cutout)" filter="url(#wood-roughness)" />
+        </svg>
+
+        <!-- Subtítulo Minimalista -->
+        <span style="color: #FFFFFF; font-family: sans-serif; font-weight: 300; font-size: 0.9rem; letter-spacing: 0.38em; text-transform: uppercase; margin-top: -6px;">
+          RESTAURANTE & PIZZARIA
+        </span>
+
+        <!-- Linha de Credenciais (Estilo Barbacoa) -->
+        <p style="color: rgba(255,255,255,0.88); font-family: sans-serif; font-weight: 500; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 6px;">
+          DESDE 1978 &nbsp;|&nbsp; GUARULHOS • SP &nbsp;|&nbsp; CHURRASCO NA BRASA &nbsp;|&nbsp; PARMEGIANAS &nbsp;|&nbsp; PIZZAS
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SEÇÃO "DESDE 1978" COM ÍCONES LATERAIS (BARBACOA STYLE) ==================== -->
+    <section id="tradicao" class="section-heritage">
+      <div class="container">
+        <h2 style="display: none;">História e Tradição do Choupana</h2>
+        
+        <div class="heritage-grid">
+          <!-- Lateral Esquerda -->
+          <div class="heritage-side left">
+            <div class="heritage-icon-card">
+              <div class="heritage-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 2a9 9 0 0 0-9 9c0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11a9 9 0 0 0-9-9z"/><path d="M9 10h6"/></svg>
+              </div>
+              <div>
+                <h3 class="heritage-card-title">Cortes Nobres & Brasa</h3>
+                <p class="heritage-card-desc">Picanha macia, cupim no bafo e o autêntico churrasco brasileiro.</p>
+              </div>
+            </div>
+
+            <div class="heritage-icon-card">
+              <div class="heritage-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+              </div>
+              <div>
+                <h3 class="heritage-card-title">O Famoso Parmegiana</h3>
+                <p class="heritage-card-desc">Molho de tomate artesanal da casa e queijo gratinado em travessa família.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centro: Grande Número & História -->
+          <div class="heritage-center">
+            <div class="heritage-number">1978</div>
+            <h3 class="heritage-subtitle">Quase 5 Décadas de História em Guarulhos</h3>
+            <p class="heritage-text">
+              Fundado no coração de Guarulhos, o Choupana começou como a emblemática <strong>"Rainha das Batidas"</strong>, conquistando gerações com suas receitas cremosas exclusivas.
+            </p>
+            <p class="heritage-text" style="margin-top: 1rem;">
+              Hoje, em um imóvel próprio amplo e moderno para mais de 200 pessoas, mantemos viva a essência que nos consagrou: fartura nas travessas, braseiro aceso todos os dias e o acolhimento caloroso que sua família merece.
+            </p>
+          </div>
+
+          <!-- Lateral Direita -->
+          <div class="heritage-side right">
+            <div class="heritage-icon-card">
+              <div class="heritage-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M8 22h8M12 11v11M5 3l7 8 7-8H5z"/></svg>
+              </div>
+              <div>
+                <h3 class="heritage-card-title">A Rainha das Batidas</h3>
+                <p class="heritage-card-desc">As clássicas receitas de coco, amendoim, morango e maracujá.</p>
+              </div>
+            </div>
+
+            <div class="heritage-icon-card">
+              <div class="heritage-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3 class="heritage-card-title">Ambiente Familiar</h3>
+                <p class="heritage-card-desc">Espaço seguro para crianças e conforto pleno para avós e pais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. MARCA DE EXCELÊNCIA & TRUST BAR (D'BRESCIA STYLE) ==================== -->
+    <section id="excelencia" class="section-trust">
+      <div class="container">
+        <h2 style="display: none;">Diferenciais e Estrutura Choupana</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="3" y="11" width="18" height="9"/><path d="M7 11V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Estacionamento Grátis</h3>
+              <p class="trust-desc">Próprio no Centro de Guarulhos com total segurança e comodidade.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Espaço Kids Dedicado</h3>
+              <p class="trust-desc">Brinquedão higienizado e monitorado para a alegria das crianças.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Nota 4.8 no Google</h3>
+              <p class="trust-desc">+1.800 avaliações de clientes e recomendação Restaurant Guru.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="4" r="2"/><path d="M9 19h6"/><path d="M12 6v7l4 4"/><path d="M8 13l4-2"/></svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Acessibilidade Total</h3>
+              <p class="trust-desc">Rampas de acesso, banheiros adaptados e assentos confortáveis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. CARDÁPIO EDITORIAL COM PREÇOS CLAROS (D.O.M. STYLE) ==================== -->
+    <section id="cardapio" class="section-menu">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Nosso Cardápio & Serviços</h2>
+          <p class="section-subtitle">
+            Transparência e ingredientes de primeira linha. Almoço com farto buffet por quilo e noites com serviço à la carte e pizzaria.
+          </p>
+        </div>
+
+        <!-- Abas do Cardápio -->
+        <div class="menu-tabs-wrapper">
+          <button class="menu-tab-btn active" data-tab="tab-almoco">
+            <span>Almoço & Buffet com Churrasco</span>
+            <span class="tab-time">11h30 às 16h</span>
+          </button>
+          <button class="menu-tab-btn" data-tab="tab-alacarte">
+            <span>Pratos da Casa & À La Carte</span>
+            <span class="tab-time">Noite & Fins de Semana</span>
+          </button>
+          <button class="menu-tab-btn" data-tab="tab-pizzas">
+            <span>Pizzaria Artesanal</span>
+            <span class="tab-time">A partir das 18h</span>
+          </button>
+          <button class="menu-tab-btn" data-tab="tab-batidas">
+            <span>A Rainha das Batidas & Drinks</span>
+            <span class="tab-time">Carta Especial</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: ALMOÇO & BUFFET -->
+        <div id="tab-almoco" class="menu-tab-content active">
+          <div class="menu-notice-box">
+            <div class="menu-notice-left">
+              <div>
+                <h3 class="menu-notice-title">Buffet Completo com Churrasco na Brasa & Ilha de Saladas</h3>
+                <p class="menu-notice-desc">Mais de 40 opções de pratos quentes, cortes nobres grelhados na hora e tradicionais receitas paulistas.</p>
+              </div>
+            </div>
+            <div class="menu-notice-price">
+              R$ 89,90 <span style="font-size: 0.9rem; font-family: var(--font-sans); font-weight: normal; color: var(--text-secondary);">/ kg (Seg a Sex)</span>
+            </div>
+          </div>
+
+          <div class="menu-items-grid">
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=200&auto=format&fit=crop" alt="Churrasco nobre" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Churrasco Nobre na Grelha <span class="menu-item-tag">Incluso no Buffet</span></h3>
+                </div>
+                <p class="menu-item-desc">Picanha fatiada, maminha na manteiga, fraldinha, linguiça toscana artesanal e o famoso pão de alho crocante.</p>
+                <span class="menu-item-serves">Servido diariamente na estação de carnes</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=200&auto=format&fit=crop" alt="Feijoada tradicional" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Tradicional Feijoada Completa <span class="menu-item-tag">Quartas & Sábados</span></h3>
+                </div>
+                <p class="menu-item-desc">Carnes nobres selecionadas, couve refogada no alho, farofa caseira na manteiga, torresmo pururuca e banana à milanesa.</p>
+                <span class="menu-item-serves">A paixão nacional servida nos dias clássicos</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=200&auto=format&fit=crop" alt="Ilha de Saladas" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Ilha de Saladas & Antepastos <span class="menu-item-tag">Opção Leve</span></h3>
+                </div>
+                <p class="menu-item-desc">Folhas nobres, queijos curados, carpaccio, palmito pupunha, salpicão e molhos autorais da casa.</p>
+                <span class="menu-item-serves">Ideal para quem busca opções vegetarianas</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=200&auto=format&fit=crop" alt="Marmitex Executivo" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Marmitex Executivo de Churrasco</h3>
+                  <span class="menu-item-price">R$ 42,50</span>
+                </div>
+                <p class="menu-item-desc">Arroz branco, feijão caseiro, farofa, fritas e mix de carnes grelhadas na brasa embalados com carinho.</p>
+                <span class="menu-item-serves">Disponível para viagem e no delivery (iFood)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: PRATOS DA CASA & À LA CARTE -->
+        <div id="tab-alacarte" class="menu-tab-content">
+          <div class="menu-notice-box">
+            <div class="menu-notice-left">
+              <div>
+                <h3 class="menu-notice-title">Pratos Compartilháveis Clássicos de São Paulo</h3>
+                <p class="menu-notice-desc">Porções generosas que servem confortavelmente de 3 a 4 pessoas, acompanhadas de arroz e guarnições.</p>
+              </div>
+            </div>
+            <div class="menu-notice-price">
+              A partir de R$ 64,90 <span style="font-size: 0.9rem; font-family: var(--font-sans); font-weight: normal; color: var(--text-secondary);">(Individual)</span>
+            </div>
+          </div>
+
+          <div class="menu-items-grid">
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=200&auto=format&fit=crop" alt="Parmegiana Choupana" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Filet Mignon à Parmegiana <span class="menu-item-tag">O Mais Famoso</span></h3>
+                  <span class="menu-item-price">R$ 230,00</span>
+                </div>
+                <p class="menu-item-desc">Corte nobre de filé mignon empanado à perfeição, coberto com molho de tomate rústico artesanal e gratinado com queijo. Acompanha arroz branco e batatas fritas crocantes.</p>
+                <span class="menu-item-serves">Serve até 4 pessoas | Opção Individual: R$ 64,90</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=200&auto=format&fit=crop" alt="Cupim e Picanha" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Picanha & Cupim no Bafo <span class="menu-item-tag">Mesa Nobre</span></h3>
+                  <span class="menu-item-price">R$ 245,00</span>
+                </div>
+                <p class="menu-item-desc">Cortes nobres assados lentamente no bafo até desmanchar. Acompanha mandioca cremosa na manteiga de garrafa, farofa da casa, molho vinagrete e pão de alho artesanal.</p>
+                <span class="menu-item-serves">Serve 3 a 4 pessoas | Porção Aperitivo: R$ 147,00</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=200&auto=format&fit=crop" alt="Filé à Cubana" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Filet Mignon à Cubana <span class="menu-item-tag">Tradição Paulista</span></h3>
+                  <span class="menu-item-price">R$ 220,00</span>
+                </div>
+                <p class="menu-item-desc">Filé à milanesa acompanhado de banana e figo empanados, rolinhos crocantes de presunto e queijo, batatas fritas e arroz à grega aromático.</p>
+                <span class="menu-item-serves">Serve 3 a 4 pessoas | Versão Frango (Supremo): R$ 175,00</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=200&auto=format&fit=crop" alt="Sobremesas da casa" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Pudim de Leite & Petit Gâteau</h3>
+                  <span class="menu-item-price">R$ 14,50</span>
+                </div>
+                <p class="menu-item-desc">O clássico pudim liso e cremoso com calda de caramelo dourada ou o Petit Gâteau de chocolate belga com sorvete de creme (R$ 29,00).</p>
+                <span class="menu-item-serves">Receita artesanal da confeitaria da casa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: PIZZARIA ARTESANAL -->
+        <div id="tab-pizzas" class="menu-tab-content">
+          <div class="menu-notice-box">
+            <div class="menu-notice-left">
+              <div>
+                <h3 class="menu-notice-title">Massa de Fermentação Natural & Forno em Alta Temperatura</h3>
+                <p class="menu-notice-desc">Mais de 30 opções clássicas e especiais servidas a partir das 18h no salão ou entregues no conforto de sua casa.</p>
+              </div>
+            </div>
+            <div class="menu-notice-price">
+              De R$ 68,00 <span style="font-size: 0.9rem; font-family: var(--font-sans); font-weight: normal; color: var(--text-secondary);">a R$ 98,00</span>
+            </div>
+          </div>
+
+          <div class="menu-items-grid">
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=200&auto=format&fit=crop" alt="Pizza Choupana" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Pizza Especial Choupana <span class="menu-item-tag">Exclusiva</span></h3>
+                  <span class="menu-item-price">R$ 88,00</span>
+                </div>
+                <p class="menu-item-desc">Molho de tomate pelado, mussarela especial, lombo canadense defumado, palmito pupunha selecionado, catupiry original e azeitonas pretas.</p>
+                <span class="menu-item-serves">8 pedaços fartos</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=200&auto=format&fit=crop" alt="Pizza Quatro Queijos" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Quatro Queijos Nobres</h3>
+                  <span class="menu-item-price">R$ 84,00</span>
+                </div>
+                <p class="menu-item-desc">Mussarela de cura artesanal, queijo provolone defumado, gorgonzola cremoso e requeijão Catupiry gratinado ao forno.</p>
+                <span class="menu-item-serves">8 pedaços fartos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: AS BATIDAS DA CHOUPANA -->
+        <div id="tab-batidas" class="menu-tab-content">
+          <div class="menu-notice-box">
+            <div class="menu-notice-left">
+              <div>
+                <h3 class="menu-notice-title">"A Rainha das Batidas" — A Tradição que Deu Origem a Tudo</h3>
+                <p class="menu-notice-desc">Batidas cremosas e refrescantes preparadas artesanalmente com vodka nobre, vinho suave ou champanhe.</p>
+              </div>
+            </div>
+            <div class="menu-notice-price">
+              R$ 28,00 <span style="font-size: 0.9rem; font-family: var(--font-sans); font-weight: normal; color: var(--text-secondary);">(Taça 400ml)</span>
+            </div>
+          </div>
+
+          <div class="menu-items-grid">
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=200&auto=format&fit=crop" alt="Batida de Coco" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Batida de Coco Tradicional <span class="menu-item-tag">A Campeã</span></h3>
+                  <span class="menu-item-price">R$ 28,00</span>
+                </div>
+                <p class="menu-item-desc">Leite de coco fresco, leite condensado e vodka ou vinho branco. Textura aveludada e toque de coco ralado tostado.</p>
+                <span class="menu-item-serves">Opção na Garrafa de 1 Litro para viagem: R$ 65,00</span>
+              </div>
+            </div>
+
+            <div class="menu-item-row">
+              <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=200&auto=format&fit=crop" alt="Batida de Morango com Vinho" class="menu-item-thumb">
+              <div class="menu-item-body">
+                <div class="menu-item-top">
+                  <h3 class="menu-item-title">Batida de Morango com Vinho</h3>
+                  <span class="menu-item-price">R$ 30,00</span>
+                </div>
+                <p class="menu-item-desc">Morangos selecionados batidos com vinho tinto suave e leite condensado. Extremamente refrescante e equilibrada.</p>
+                <span class="menu-item-serves">Também disponível nos sabores Amendoim e Maracujá</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cta-bar">
+          <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20card%C3%A1pio%20completo%20do%20Choupana." target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+            Solicitar Cardápio em PDF
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20reserva%20para%20hoje/amanh%C3%A3!" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+            Fazer Minha Reserva Agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. QUEM ESTÁ À FRENTE (D'BRESCIA STYLE) ==================== -->
+    <section id="lideranca" class="section-leadership">
+      <div class="container">
+        <div class="leadership-grid">
+          <div class="leadership-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" alt="Liderança Gastronômica Choupana" class="leadership-image">
+            <div class="leadership-badge-overlay">
+              <h3 class="leadership-badge-title">Gestão Familiar</h3>
+              <p class="leadership-badge-sub">Desde 1978 no salão e na brasa</p>
+            </div>
+          </div>
+
+          <div class="leadership-content">
+            <h2 class="section-title">Quem faz a tradição acontecer todos os dias.</h2>
+            <p class="leadership-quote">
+              "Aqui não servimos apenas comida; recebemos cada cliente como quem recebe um amigo de longa data na sala de casa."
+            </p>
+            <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.7;">
+              Diferente de grandes redes impessoais, o Choupana mantém viva a presença calorosa de seus fundadores e mestres churrasqueiros. Cada corte que vai à brasa, cada molho de parmegiana que ferve e cada batida que é batida na coqueteleira passam por um crivo rigoroso de qualidade e respeito ao cliente de Guarulhos.
+            </p>
+            <div class="leadership-signature">
+              <div>
+                <div class="leadership-owner-name">Família Choupana & Equipe de Mestres</div>
+                <div class="leadership-owner-role">Mais de 40 colaboradores dedicados à sua experiência</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. ESPAÇO KIDS & ATRIBUTOS DE VALOR ==================== -->
+    <section id="familia" class="section-features-split">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Pensado para Cada Membro da Sua Família</h2>
+          <p class="section-subtitle">
+            Almoçar fora no fim de semana deve ser um momento de pura alegria e descanso, sem estresse com fila, trânsito ou crianças entediadas.
+          </p>
+        </div>
+
+        <div class="split-card-grid">
+          <!-- Card Espaço Kids -->
+          <div class="feature-box">
+            <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=800&auto=format&fit=crop" alt="Espaço Kids Seguro" class="feature-box-img">
+            <div class="feature-box-body">
+              <h3 class="feature-box-title">Espaço Kids Completo & Seguro</h3>
+              <p class="feature-box-desc">
+                Um amplo brinquedão com piscina de bolinhas, escorregadores e jogos infantis em área higienizada e visualmente acessível para os pais almoçarem com tranquilidade.
+              </p>
+              <ul class="feature-list">
+                <li><span class="bullet-square"></span> Brinquedão seguro e com proteção antichoque</li>
+                <li><span class="bullet-square"></span> Fraldário dedicado e banheiros infantis</li>
+                <li><span class="bullet-square"></span> Cadeirões altos confortáveis para bebês</li>
+              </ul>
+              <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20as%20mesas%20pr%C3%B3ximas%20ao%20espa%C3%A7o%20kids!" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                Reservar Mesas no Espaço Kids
+              </a>
+            </div>
+          </div>
+
+          <!-- Card Salão Amplo & Deck -->
+          <div class="feature-box">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Salão moderno Choupana" class="feature-box-img">
+            <div class="feature-box-body">
+              <h3 class="feature-box-title">Salão para 200 Pessoas & Deck Externo</h3>
+              <p class="feature-box-desc">
+                Estrutura própria moderna, climatizada e espaçosa. Com mesas amplas perfeitas para grandes famílias, além de agradável deck ao ar livre e música ao vivo aos finais de semana.
+              </p>
+              <ul class="feature-list">
+                <li><span class="bullet-square"></span> Estacionamento próprio gratuito no local com manobrista</li>
+                <li><span class="bullet-square"></span> Acessibilidade total para cadeirantes e idosos</li>
+                <li><span class="bullet-square"></span> Música ao vivo de bom gosto aos finais de semana</li>
+              </ul>
+              <a href="#localizacao" class="btn btn-dark">
+                Como Chegar & Estacionar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. COMEMORAÇÕES & ANIVERSÁRIOS ==================== -->
+    <section class="section-celebrations">
+      <div class="container">
+        <div class="celebrations-card">
+          <div>
+            <h2 class="celebrations-title">Comemore seu Aniversário no Choupana!</h2>
+            <p class="celebrations-desc">
+              Mesas personalizadas para o seu grupo, pratos fartos para compartilhar e vantagens exclusivas para o aniversariante. Traga seus amigos e família para celebrar conosco!
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+              <div>
+                <div style="font-size: 1.3rem; font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px;">Cortesia da Casa</div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85);">Sobremesa ou Batida especial para o aniversariante</div>
+              </div>
+              <div>
+                <div style="font-size: 1.3rem; font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px;">Grupos Grandes</div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85);">Mesas integradas com conforto e atendimento dedicado</div>
+              </div>
+            </div>
+          </div>
+
+          <form id="bdayForm" class="celebrations-form">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem; color: var(--text-headline);">Consultar Reserva de Grupo</h3>
+            
+            <div class="form-group">
+              <label for="bdayName" class="form-label">Seu Nome Completo</label>
+              <input type="text" id="bdayName" class="form-input" placeholder="Ex: Roberto Carlos" required>
+            </div>
+
+            <div class="form-group">
+              <label for="bdayDate" class="form-label">Data Pretendida</label>
+              <input type="date" id="bdayDate" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="bdayGuests" class="form-label">Número Estimado de Convidados</label>
+              <input type="number" id="bdayGuests" class="form-input" placeholder="Ex: 12 pessoas" min="2" max="100" required>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 0.75rem;">
+              Solicitar Reserva pelo WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. ONDE ESTAMOS & HORÁRIOS (BARBACOA STYLE) ==================== -->
+    <section id="localizacao" class="section-location">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-details">
+            <h2 class="location-address-title">Nosso Endereço & Horários</h2>
+
+            <div class="location-address-box">
+              <p style="font-size: 1.2rem; font-weight: 700; color: var(--text-headline);">
+                Rua Força Pública, 345 – Centro, Guarulhos – SP
+              </p>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.35rem;">
+                CEP: 07012-030 • Próximo à Praça Quarto Centenário e Av. Guarulhos.
+              </p>
+              <p style="color: var(--color-success); font-weight: 700; font-size: 0.92rem; margin-top: 0.65rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                Estacionamento próprio gratuito no local com manobrista.
+              </p>
+            </div>
+
+            <div class="location-hours-box">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.85rem; color: var(--text-headline);">Horários de Funcionamento:</h3>
+              <div class="location-hours-row">
+                <span>Segunda a Quinta</span>
+                <strong>11h30 às 00h30</strong>
+              </div>
+              <div class="location-hours-row">
+                <span>Sexta e Sábado</span>
+                <strong>11h30 às 01h30</strong>
+              </div>
+              <div class="location-hours-row">
+                <span>Domingo</span>
+                <strong>11h30 às 00h00</strong>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem;">
+                * Buffet de Almoço até as 16h. Jantar à La Carte e Pizzaria a partir das 18h.
+              </p>
+            </div>
+
+            <div class="location-actions">
+              <a href="https://waze.com/ul?q=Rua%20Forca%20Publica%20345%20Guarulhos" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                Traçar Rota no Waze
+              </a>
+              <a href="https://maps.google.com/?q=Rua+Forca+Publica+345+Guarulhos" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-gold">
+                Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="location-map-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Rua%20For%C3%A7a%20P%C3%BAblica,%20345%20Centro%20Guarulhos&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              title="Mapa de Localização Choupana">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. MINI-HERO DE FECHAMENTO (BARBACOA STYLE) ==================== -->
+    <section class="section-mini-hero" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920&auto=format&fit=crop');">
+      <div class="mini-hero-overlay"></div>
+      <div class="container mini-hero-content">
+        <h2 class="mini-hero-title">Esperamos você e sua família para viver essa tradição.</h2>
+        <p class="mini-hero-subtitle">
+          Churrasco no ponto certo, pratos fartos e o calor humano que só o Choupana oferece há quase 50 anos em Guarulhos.
+        </p>
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1!%20Gostaria%20de%20garantir%20minha%20reserva%20no%20Choupana." target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 1.1rem 2.4rem; font-size: 1rem;">
+            Garantir Minha Reserva
+          </a>
+          <a href="tel:1124400545" class="btn" style="padding: 1.1rem 2rem; font-size: 1rem;">
+            Ligar: (11) 2440-0545
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER INSTITUCIONAL ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Choupana</div>
+          <p class="footer-brand-desc">
+            A Rainha das Batidas. Quase 5 décadas sendo referência em gastronomia brasileira, carnes nobres e momentos inesquecíveis em família no Centro de Guarulhos.
+          </p>
+          <div>
+            <a href="https://instagram.com/choupanaguarulhos" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold-border); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;">INSTAGRAM: @choupanaguarulhos</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Navegação Rápida</h3>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#tradicao">História Desde 1978</a></li>
+            <li><a href="#cardapio">Cardápio & Preços</a></li>
+            <li><a href="#lideranca">Quem Somos</a></li>
+            <li><a href="#familia">Espaço Kids & Estrutura</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Serviços & Eventos</h3>
+          <ul class="footer-links-list">
+            <li><a href="#cardapio">Buffet de Almoço</a></li>
+            <li><a href="#cardapio">Pratos da Casa & À La Carte</a></li>
+            <li><a href="#cardapio">Pizzaria Noturna</a></li>
+            <li><a href="#cardapio">As Famosas Batidas</a></li>
+            <li><a href="#localizacao">Reservas para Aniversários</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Atendimento</h3>
+          <div class="footer-contact-item">
+            <span>Rua Força Pública, 345 – Centro, Guarulhos - SP</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>Telefones: (11) 2440-0545 / (11) 2440-3430</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>WhatsApp Reservas: (11) 2440-0545</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>Estacionamento Gratuito Próprio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Choupana Restaurante & Pizzaria • CNPJ: 49.816.622/0001-81 • Todos os direitos reservados.
+        </div>
+        <div>
+          Tradição Gastronômica de Guarulhos desde 1978.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== STICKY MOBILE ACTION BAR ==================== -->
+  <aside class="sticky-mobile-bar" aria-label="Ações rápidas mobile">
+    <div class="sticky-bar-items">
+      <a href="#cardapio" class="sticky-bar-btn">
+        Cardápio
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=551124400545&text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20mesa%20no%20Choupana." target="_blank" rel="noopener noreferrer" class="sticky-bar-btn primary">
+        Reservar Mesa
+      </a>
+      <a href="https://waze.com/ul?q=Rua%20Forca%20Publica%20345%20Guarulhos" target="_blank" rel="noopener noreferrer" class="sticky-bar-btn">
+        Como Chegar
+      </a>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
