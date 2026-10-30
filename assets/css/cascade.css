@@ -1,0 +1,22 @@
+/* Entrada progressiva: sem JavaScript, o conteúdo permanece visível. */
+.cascade-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: none;
+  pointer-events: none;
+}
+.cascade-item.cascade-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity var(--motion-enter) var(--motion-ease), transform var(--motion-enter) var(--motion-ease);
+  transition-delay: var(--cascade-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cascade-item, .cascade-item.cascade-visible { opacity: 1; transform: none; transition: none; pointer-events: auto; }
+}
+
+@media print {
+  .cascade-item, .cascade-item.cascade-visible { opacity: 1; transform: none; transition: none; }
+}

@@ -2,6 +2,8 @@
 
 Website institucional e gastronômico oficial do **Choupana Restaurante & Pizzaria** (fundado em 1978 em Guarulhos - SP).
 
+Versão em desenvolvimento com apresentações próprias para computador e celular (até 760 px). As decisões atuais de composição e os tratamentos das fotografias estão documentados em [DESIGN.md](DESIGN.md). Os arquivos de origem das imagens estão registrados nos manifestos em `assets/images/`. A pasta `.local-review/` contém ferramentas e capturas locais e não integra o repositório.
+
 Desenvolvido com foco em **alta gastronomia**, **UX/UI orientada à conversão**, **acessibilidade WCAG AA** e ausência de anti-patterns de IA (utilizando as skills *Impeccable* e *Taste-Skill*).
 
 ---

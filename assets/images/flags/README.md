@@ -1,0 +1,1 @@
+Bandeiras em SVG obtidas de https://flagcdn.com/br.svg, https://flagcdn.com/us.svg, https://flagcdn.com/gb.svg, https://flagcdn.com/au.svg e https://flagcdn.com/ca.svg. Uso local como indicação visual de idioma dos cardápios.

@@ -6,3 +6,7 @@ findings*.json
 *.log
 .DS_Store
 Thumbs.db
+
+# Ferramentas e capturas de revisão local
+.local-review/
+.openai/

@@ -1,0 +1,402 @@
+[
+  {
+    "file": "assets/images/restaurant/buffet-creme.webp",
+    "original_file": "2026-10-15_16-49-29_UTC_1.jpg",
+    "batch": "recent",
+    "batch_number": 14,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      864,
+      1080
+    ],
+    "size": [
+      864,
+      1080
+    ],
+    "sha256": "3a3f6ccb8e53a81fc1c7c76e1874b24c031c6dcd48894d75f539362536febfa2"
+  },
+  {
+    "file": "assets/images/restaurant/buffet-saladas.webp",
+    "original_file": "2026-10-15_16-49-29_UTC_3.jpg",
+    "batch": "recent",
+    "batch_number": 15,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3276,
+      4095
+    ],
+    "size": [
+      1280,
+      1600
+    ],
+    "sha256": "d254b9c7fc79f9b8ea25f030e69d59c158a01543b344bfa3b7a7db065027500a"
+  },
+  {
+    "file": "assets/images/restaurant/buffet-pratos.webp",
+    "original_file": "2026-10-15_16-49-29_UTC_5.jpg",
+    "batch": "recent",
+    "batch_number": 16,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3276,
+      4095
+    ],
+    "size": [
+      1280,
+      1600
+    ],
+    "sha256": "73156f6c207c57ed1c1a35cc5228bfe7998eff9e33b3dac37587ec74f5ae1cbf"
+  },
+  {
+    "file": "assets/images/restaurant/buffet-atendimento.webp",
+    "original_file": "2026-10-15_16-49-29_UTC_8.jpg",
+    "batch": "recent",
+    "batch_number": 17,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "601507778283dc1b0b25c713549b399c6218ca0c5996fee250f1f6df7aac6e38"
+  },
+  {
+    "file": "assets/images/restaurant/sobremesa-gelada.webp",
+    "original_file": "2026-10-23_14-45-02_UTC_1.jpg",
+    "batch": "recent",
+    "batch_number": 19,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3024,
+      4032
+    ],
+    "size": [
+      1200,
+      1600
+    ],
+    "sha256": "9d4990bc18ded454a3556492ae5eb1a926bb29bafd263f43e24b6ce8a6e3f636"
+  },
+  {
+    "file": "assets/images/restaurant/petit-gateau-1.webp",
+    "original_file": "2026-10-23_14-45-02_UTC_2.jpg",
+    "batch": "recent",
+    "batch_number": 20,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3024,
+      4032
+    ],
+    "size": [
+      1200,
+      1600
+    ],
+    "sha256": "ece47f56242cdbee15ab58f391fb0fc3eea9fd0543fa5e3a6bd75662beccbfa1"
+  },
+  {
+    "file": "assets/images/restaurant/petit-gateau-2.webp",
+    "original_file": "2026-10-23_14-45-02_UTC_3.jpg",
+    "batch": "recent",
+    "batch_number": 21,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3024,
+      4032
+    ],
+    "size": [
+      1200,
+      1600
+    ],
+    "sha256": "157a4fe91e5083b6c55306fd8d25be47b3981cc5e4f0cbc40b471c5658be2aad"
+  },
+  {
+    "file": "assets/images/restaurant/petit-gateau-3.webp",
+    "original_file": "2026-10-23_14-45-02_UTC_4.jpg",
+    "batch": "recent",
+    "batch_number": 22,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      3024,
+      4032
+    ],
+    "size": [
+      1200,
+      1600
+    ],
+    "sha256": "5042e4f9ad69d6453bd87d5d87f9e52887d70f7cd8d0325d262881b7a98b105d"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-da-casa.webp",
+    "original_file": "2026-10-26_22-21-37_UTC_1.jpg",
+    "batch": "recent",
+    "batch_number": 30,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "e907dddb90bdebddc227d65f6b14ec6016048846d559a95c9aa1bc22fbc31691"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-queijos.webp",
+    "original_file": "2026-10-26_22-21-37_UTC_2.jpg",
+    "batch": "recent",
+    "batch_number": 31,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "fc3fb8c9331ad46724f3bf7fe88731b4e3762fca1cf7a1e95e4587c8b94f108b"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-classica.webp",
+    "original_file": "2026-10-26_22-21-37_UTC_3.jpg",
+    "batch": "recent",
+    "batch_number": 32,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "7bc22acc4997649abb9828980f422f9b56e7070dd8446ac5f58bf88750801f3e"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-tomate.webp",
+    "original_file": "2026-10-26_22-21-37_UTC_4.jpg",
+    "batch": "recent",
+    "batch_number": 33,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "583e012f8fee5646aeb92e7e8c4a824bd2866bcb0288d6caef4399269edd7d54"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-morango.webp",
+    "original_file": "2026-10-26_22-21-37_UTC_5.jpg",
+    "batch": "recent",
+    "batch_number": 34,
+    "source": "https://www.instagram.com/choupanaguarulhos/",
+    "original_size": [
+      1080,
+      1350
+    ],
+    "size": [
+      1080,
+      1350
+    ],
+    "sha256": "eac54cadc192077a5dbca95d400a2f455a0d94ee48bf3bed8429c3a64b5dd378"
+  },
+  {
+    "file": "assets/images/restaurant/salao-historico.webp",
+    "original_file": "2016-04-29_14-02-38_BEyWv5mNGwE_01.jpg",
+    "batch": "oldest",
+    "batch_number": 1,
+    "source": "https://www.instagram.com/p/BEyWv5mNGwE/",
+    "original_size": [
+      1000,
+      1000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "sha256": "6a66198dacfe8f5e2523de12499b520b141785e76444921a5f79815a317a388d"
+  },
+  {
+    "file": "assets/images/restaurant/frango-empanado.webp",
+    "original_file": "2016-05-13_22-00-17_BFXQimoNGzC_01.jpg",
+    "batch": "oldest",
+    "batch_number": 2,
+    "source": "https://www.instagram.com/p/BFXQimoNGzC/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "62a566d359ca4469b8a85e636bc6ba0ab37041b5fb62da770919a7e8038defd2"
+  },
+  {
+    "file": "assets/images/restaurant/churrasco-prato.webp",
+    "original_file": "2016-05-28_14-00-00_BF9BgEXNGwa_01.jpg",
+    "batch": "oldest",
+    "batch_number": 3,
+    "source": "https://www.instagram.com/p/BF9BgEXNGwa/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "0f2221b9be5c9f353bb263e0b132bf3b982f843cf84267860078e74076a25b89"
+  },
+  {
+    "file": "assets/images/restaurant/petit-gateau-historico.webp",
+    "original_file": "2016-06-03_22-00-15_BGNVOyatGyQ_01.jpg",
+    "batch": "oldest",
+    "batch_number": 4,
+    "source": "https://www.instagram.com/p/BGNVOyatGyQ/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "d213394aafa1ee1d9eeb462b1ef472860e55c7e42b05cb21efab4ae739546d8e"
+  },
+  {
+    "file": "assets/images/restaurant/camarao-empanado.webp",
+    "original_file": "2016-06-13_23-00-22_BGnMDwlNG1Q_01.jpg",
+    "batch": "oldest",
+    "batch_number": 5,
+    "source": "https://www.instagram.com/p/BGnMDwlNG1Q/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "6800a297e412d33dcef3d6e0b52e8f9bfe96e58217fbb1eaa34d79aead7013d6"
+  },
+  {
+    "file": "assets/images/restaurant/frango-grelhado.webp",
+    "original_file": "2016-06-16_22-00-04_BGuzivMNG3W_01.jpg",
+    "batch": "oldest",
+    "batch_number": 6,
+    "source": "https://www.instagram.com/p/BGuzivMNG3W/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "e01af093b60b3c279765445936443b3af264bc6e0b904fe5da32f496c9329418"
+  },
+  {
+    "file": "assets/images/restaurant/batatas-fritas.webp",
+    "original_file": "2016-06-17_22-00-28_BGxYYiKNG-X_01.jpg",
+    "batch": "oldest",
+    "batch_number": 7,
+    "source": "https://www.instagram.com/p/BGxYYiKNG-X/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "476e376695f572575d426d68373c98b06347bd4d6778d794bc3b3d103938e7b2"
+  },
+  {
+    "file": "assets/images/restaurant/batatas-especiais.webp",
+    "original_file": "2016-06-27_22-00-30_BHLIVk1jCxm_01.jpg",
+    "batch": "oldest",
+    "batch_number": 8,
+    "source": "https://www.instagram.com/p/BHLIVk1jCxm/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "9783afee090f51d50bad52c35312b1e55d31efa55790585706ee56d739ef30b9"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-tradicional.webp",
+    "original_file": "2016-07-07_22-00-07_BHk4PiDDM39_01.jpg",
+    "batch": "oldest",
+    "batch_number": 10,
+    "source": "https://www.instagram.com/p/BHk4PiDDM39/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "d938ad6ba5a2356d768f5810f865e66c2c12ac6bb15252556495b8184c7ac067"
+  },
+  {
+    "file": "assets/images/restaurant/churrasco-espeto-historico.webp",
+    "original_file": "2016-07-18_23-00-33_BIBT5y8jip1_01.jpg",
+    "batch": "oldest",
+    "batch_number": 12,
+    "source": "https://www.instagram.com/p/BIBT5y8jip1/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "ddc1cb32d7add47e9bd952666997eafe20977af119ed415bffef83c7270c8aec"
+  },
+  {
+    "file": "assets/images/restaurant/pizza-fatia.webp",
+    "original_file": "2016-07-21_22-00-36_BII7bT5AdiR_01.jpg",
+    "batch": "oldest",
+    "batch_number": 13,
+    "source": "https://www.instagram.com/p/BII7bT5AdiR/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "3a2650eb1967a13de5914f36de48ba90124e5eba8e52b4a43767729bf74c0133"
+  },
+  {
+    "file": "assets/images/restaurant/comemoracao.webp",
+    "original_file": "2016-07-07_21-59-58_BHk4OebD5_h_01.jpg",
+    "batch": "oldest",
+    "batch_number": 9,
+    "source": "https://www.instagram.com/p/BHk4OebD5_h/",
+    "original_size": [
+      1080,
+      1080
+    ],
+    "size": [
+      1080,
+      1080
+    ],
+    "sha256": "46d9c545cb3daf8eb1fc28c8f6ac05a08fcf8c853d2dbc15f55dc259ed15574d"
+  }
+]

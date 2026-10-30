@@ -1,0 +1,134 @@
+/* Cardápios por idioma sobre madeira escura, com cartões opacos. */
+.section-menu.menu-downloads {
+  --menu-card-surface: #252728;
+  --menu-background: #111213;
+  background: var(--menu-background);
+  color: var(--text-menu);
+  padding: 5.5rem 1.5rem 4.5rem;
+  border-block: 1px solid #31271f;
+  position: relative;
+  isolation: isolate;
+}
+.section-menu.menu-downloads::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .06;
+  background-image: url('../images/menu/charred-wood.webp');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  clip-path: inset(0);
+}
+
+.menu-downloads-inner { max-width: 840px; margin-inline: auto; position: relative; }
+.menu-downloads-heading { text-align: center; margin-bottom: 3rem; }
+.menu-downloads-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: .9rem;
+  font: 500 var(--type-label)/1.5 var(--font-sans);
+  letter-spacing: .13em;
+  color: #d3ad75;
+}
+.menu-downloads-eyebrow::before, .menu-downloads-eyebrow::after { content: ''; width: 32px; height: 1px; background: #765b38; }
+.menu-downloads-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4eee3;
+  letter-spacing: -.02em;
+}
+.menu-downloads-intro { font-size: .875rem; line-height: 1.8; max-width: 490px; margin: .85rem auto 0; color: var(--text-menu); }
+.menu-language-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.menu-language-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 570px;
+  padding: 2.3rem 2rem 2rem;
+  background: var(--menu-card-surface);
+  border: 1px solid #725839;
+  position: relative;
+  box-shadow: 0 14px 35px #00000026, inset 0 0 0 5px var(--menu-card-surface), inset 0 0 0 6px #b7976026;
+}
+.menu-language-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 5px;
+  background: var(--color-menu-gold);
+}
+.menu-language-card--primary { border-color: #a4834e; }
+.menu-language-ribbon {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 7px 15px;
+  background: #39332a;
+  border-top: 1px solid #a4834e;
+  box-shadow: 3px 5px 12px #00000030;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 5px), 0 100%);
+  pointer-events: none;
+}
+.menu-language-ribbon img { display: block; width: 28px; height: 19px; object-fit: contain; flex: none; }
+.menu-language-topline, .menu-language-title, .menu-language-summary { padding-right: 44px; }
+.menu-language-topline { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1.25rem; }
+.menu-language-kicker {
+  font-family: 'Barlow Condensed', var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: .18em;
+  color: #c9bca5;
+  text-transform: uppercase;
+}
+.menu-language-title { font: 600 2.25rem/1.1 var(--font-serif); color: #f4eee3; margin-bottom: .8rem; letter-spacing: -.02em; }
+.menu-language-summary { font-size: var(--type-small); line-height: 1.7; min-height: 4em; }
+.menu-language-categories { border-block: 1px solid #8d704c45; padding-block: 1.4rem; margin-top: 1rem; margin-bottom: 1.75rem; }
+.menu-language-categories div + div { margin-top: 1.3rem; }
+.menu-language-categories dt { color: #e6c99f; font: 600 1.2rem/1.25 var(--font-serif); margin-bottom: .35rem; }
+.menu-language-categories dd { margin: 0; font-size: var(--type-label); line-height: 1.65; color: var(--text-menu); }
+.menu-language-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: .8rem 1rem;
+  border: 1px solid var(--color-menu-gold);
+  background: var(--color-menu-gold);
+  color: #19120b;
+  font: 700 var(--type-small)/1.25 'Barlow Condensed', var(--font-sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.menu-language-action:disabled { cursor: default; opacity: 1; background: #473722; color: #ead7b7; border-color: #83683e; }
+.menu-language-action--secondary { background: transparent; color: #c9bca5; border-color: var(--border-menu); }
+.menu-language-action[href]:hover { background: #e0b45e; border-color: #e0b45e; color: #19120b; }
+.menu-language-action:focus-visible, .menu-downloads-whatsapp:focus-visible { outline: 2px solid #e0b45e; outline-offset: 5px; }
+.menu-language-action svg { width: 15px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.menu-downloads-footer { display: flex; justify-content: center; margin-top: 2.5rem; }
+.menu-downloads-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; font: 600 var(--type-label)/1.5 'Barlow Condensed', var(--font-sans); letter-spacing: .07em; text-transform: uppercase; color: #e1b357; padding: .6rem .7rem; border-bottom: 1px solid var(--border-menu); text-align: center; }
+.menu-downloads-whatsapp:hover { color: #f2cf8e; border-color: currentColor; }
+.menu-downloads-whatsapp svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; flex: none; }
+
+@media (max-width: 640px) {
+  .section-menu.menu-downloads { padding: 3.5rem 1.25rem 3rem; }
+  .menu-downloads-heading { margin-bottom: 2rem; }
+  .menu-language-grid { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; max-width: 370px; margin-inline: auto; }
+  .menu-language-card { min-height: 550px; padding: 1.8rem 1.5rem; }
+  .menu-language-summary { min-height: 0; }
+}

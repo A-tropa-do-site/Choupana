@@ -1,0 +1,122 @@
+/* Mosaico amplo com fumaça fotorealista em camadas decorativas. */
+.atmosphere-flow { position: relative; isolation: isolate; overflow: clip; }
+.section-leadership {
+  isolation: auto;
+  background: var(--surface-charcoal-warm);
+  padding: 88px 0 92px;
+  border-top: 1px solid var(--color-gold-border);
+}
+
+.atmosphere-flow > section { position: relative; z-index: auto; }
+.atmosphere-flow .menu-downloads-inner,
+.atmosphere-flow .leadership-top-header,
+.atmosphere-flow .mosaic-strip-wrapper,
+.atmosphere-flow .leadership-card-container,
+.atmosphere-flow #familia > .container { position: relative; z-index: 2; }
+.leadership-smoke {
+  position: absolute;
+  top: var(--smoke-top, 600px);
+  left: 0;
+  right: 0;
+  height: var(--smoke-height, 1500px);
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 180px, #000 calc(100% - 240px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 180px, #000 calc(100% - 240px), transparent);
+}
+.leadership-smoke img { position: absolute; width: 112%; max-width: none; height: auto; left: -10%; top: var(--smoke-focus-y, 280px); opacity: .13; filter: invert(1) brightness(.8); animation: leadership-smoke-drift 24s ease-in-out infinite alternate; animation-play-state: paused; will-change: auto; }
+.leadership-smoke .smoke-plume--upper { width: 110%; left: -6%; top: -50px; opacity: .12; filter: invert(1) brightness(.8); animation: leadership-smoke-return 29s ease-in-out -12s infinite alternate; animation-play-state: paused; }
+.leadership-smoke .smoke-plume--lower { width: 105%; left: 12%; top: calc(var(--smoke-leadership-end, 1200px) - 420px); opacity: .095; animation: leadership-smoke-return 32s ease-in-out -18s infinite alternate; animation-play-state: paused; }
+.smoke-trails { position: absolute; inset: 0; pointer-events: none; }
+.leadership-smoke .smoke-plume--trail { width: 140%; left: var(--trail-x, -15%); top: var(--trail-y, 1000px); opacity: var(--trail-opacity, .05); filter: invert(1) brightness(.8); animation: leadership-smoke-drift var(--trail-duration, 34s) ease-in-out var(--trail-delay, -8s) infinite alternate; animation-play-state: paused; }
+.atmosphere-in-view .leadership-smoke img.smoke-in-view { animation-play-state: running; }
+.leadership-smoke img.smoke-in-view { will-change: transform; }
+.leadership-top-header { max-width: 920px; margin-bottom: 2rem; }
+.section-leadership .section-title { font-size: clamp(2rem, 3.4vw, 3.2rem); color: var(--text-on-wood); }
+
+.section-leadership .mosaic-strip-wrapper { z-index: 1; overflow: hidden; padding: 0; contain: none; }
+.section-leadership .mosaic-strip {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: clamp(460px, 39vw, 680px);
+  margin: 0;
+}
+.section-leadership .mosaic-item {
+  position: absolute;
+  left: var(--shard-x);
+  top: var(--shard-y);
+  width: var(--shard-w);
+  height: var(--shard-h);
+  min-width: 0;
+  margin: 0;
+  border-radius: 0;
+  clip-path: var(--shard-clip);
+  opacity: .87;
+  filter: grayscale(22%) saturate(.8);
+  cursor: default;
+  will-change: auto;
+}
+.section-leadership .mosaic-item.active, .section-leadership .mosaic-item:hover { opacity: 1; filter: grayscale(0%); }
+.section-leadership .mosaic-img {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  max-width: none;
+  left: var(--photo-left, -10%);
+  top: var(--photo-top, -10%);
+  object-fit: cover;
+  object-position: 50% 65%;
+  transform: none;
+}
+.section-leadership .mosaic-item:hover .mosaic-img,
+.section-leadership .mosaic-item.active .mosaic-img { transform: none; }
+.section-leadership .leadership-card-container { width: 100%; max-width: none; padding-inline: clamp(32px, 6vw, 112px); margin-top: -140px; }
+.section-leadership .leadership-floating-wrapper { max-width: 680px; width: 56%; margin-left: 0; }
+.section-leadership .leadership-floating-card { background: var(--surface-paper); padding: 44px 48px; border-radius: 8px; border-top: 3px solid var(--color-gold-border); box-shadow: 0 18px 48px #00000026; }
+.section-leadership .leadership-quote { font-size: clamp(1.7rem, 2.35vw, 2.2rem); line-height: 1.28; margin-block: 20px 28px; }
+.section-leadership .leadership-card-topbar { margin-bottom: 0; }
+.section-leadership .author-role { max-width: 360px; }
+
+@keyframes leadership-smoke-drift {
+  from { transform: translate3d(-3%, 4%, 0) scale(1.03); }
+  to { transform: translate3d(5%, -3%, 0) scale(1.12); }
+}
+@keyframes leadership-smoke-return {
+  from { transform: translate3d(4%, 3%, 0) scaleX(-1) scale(1.1); }
+  to { transform: translate3d(-7%, -4%, 0) scaleX(-1) scale(1.02); }
+}
+
+@media (max-width: 1100px) {
+  .section-leadership .leadership-card-container { margin-top: -100px; }
+  .section-leadership .leadership-floating-wrapper { width: 66%; }
+  .section-leadership .leadership-floating-card { padding: 36px 38px; }
+}
+
+@media (max-width: 760px) {
+  .section-leadership { padding: 58px 0 60px; }
+  .leadership-top-header { margin-bottom: 1.25rem; }
+  .section-leadership .mosaic-strip { width: 100%; height: 400px; margin: 0; }
+  .section-leadership .mosaic-strip-wrapper { overflow: hidden; }
+  .section-leadership .mosaic-item { opacity: .95; }
+  .section-leadership .leadership-card-container { padding-inline: 20px; margin-top: -28px; }
+  .section-leadership .leadership-floating-wrapper { width: 100%; max-width: 560px; margin-inline: auto; }
+  .section-leadership .leadership-floating-card { padding: 26px 24px; }
+  .leadership-smoke img { width: 225%; left: -75%; top: var(--smoke-focus-y, 220px); opacity: .12; }
+  .leadership-smoke .smoke-plume--upper { width: 210%; left: -40%; top: -30px; opacity: .11; }
+  .leadership-smoke .smoke-plume--lower { width: 225%; left: -45%; top: calc(var(--smoke-leadership-end, 1200px) - 260px); opacity: .085; }
+  .leadership-smoke .smoke-plume--trail { width: 240%; }
+  .section-leadership .mosaic-pill { font-size: var(--type-label); padding: 5px 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leadership-smoke img,
+  .leadership-smoke .smoke-plume--upper,
+  .leadership-smoke .smoke-plume--lower,
+  .leadership-smoke .smoke-plume--trail { animation: none; will-change: auto; }
+  .section-leadership .mosaic-item, .section-leadership .mosaic-img { transition: none; }
+}
+
+.author-monogram { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--color-wood); color: var(--text-on-wood); border: 1px solid var(--color-gold-border); font: 600 1.65rem/1 var(--font-serif); }
