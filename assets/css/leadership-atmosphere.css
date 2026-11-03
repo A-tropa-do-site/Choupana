@@ -22,16 +22,20 @@
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 180px, #000 calc(100% - 240px), transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 180px, #000 calc(100% - 240px), transparent);
+  /* Clip the boundary without a mask spanning thousands of animated pixels. */
+  contain: paint;
+}
+.leadership-smoke img {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 76%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 76%, transparent);
 }
 .leadership-smoke img { position: absolute; width: 112%; max-width: none; height: auto; left: -10%; top: var(--smoke-focus-y, 280px); opacity: .13; filter: invert(1) brightness(.8); animation: leadership-smoke-drift 24s ease-in-out infinite alternate; animation-play-state: paused; will-change: auto; }
 .leadership-smoke .smoke-plume--upper { width: 110%; left: -6%; top: -50px; opacity: .12; filter: invert(1) brightness(.8); animation: leadership-smoke-return 29s ease-in-out -12s infinite alternate; animation-play-state: paused; }
 .leadership-smoke .smoke-plume--lower { width: 105%; left: 12%; top: calc(var(--smoke-leadership-end, 1200px) - 420px); opacity: .095; animation: leadership-smoke-return 32s ease-in-out -18s infinite alternate; animation-play-state: paused; }
 .smoke-trails { position: absolute; inset: 0; pointer-events: none; }
 .leadership-smoke .smoke-plume--trail { width: 140%; left: var(--trail-x, -15%); top: var(--trail-y, 1000px); opacity: var(--trail-opacity, .05); filter: invert(1) brightness(.8); animation: leadership-smoke-drift var(--trail-duration, 34s) ease-in-out var(--trail-delay, -8s) infinite alternate; animation-play-state: paused; }
-.atmosphere-in-view .leadership-smoke img.smoke-in-view { animation-play-state: running; }
-.leadership-smoke img.smoke-in-view { will-change: transform; }
+.atmosphere-in-view .leadership-smoke img.smoke-animating { animation-play-state: running; }
+.leadership-smoke img.smoke-animating { will-change: transform; }
 .leadership-top-header { max-width: 920px; margin-bottom: 2rem; }
 .section-leadership .section-title { font-size: clamp(2rem, 3.4vw, 3.2rem); color: var(--text-on-wood); }
 
