@@ -52,6 +52,8 @@ Manter dois cartões verticais por idioma, títulos serifados, fundo escuro com 
 
 ## Modelo de celular
 
+Os dois botões do hero ficam visíveis na primeira tela, inclusive em celular na horizontal. A barra de ações inferior começa fora da tela, oculta para teclado e leitores de tela; ao sair do hero, entra de baixo para cima em 320 ms e se esconde ao voltar ao topo. Segue o limite de 760 px do modelo de celular e dispensa a transição quando `prefers-reduced-motion` está ativo.
+
 Em larguras até 760 CSS px, `assets/css/mobile.css` mantém somente Hero, história de 1978, Carnes & bebidas, Cardápio, aniversário, localização/mapa e footer. Liderança, galeria familiar e chamada final ficam disponíveis no modelo de computador, sem exclusão de conteúdo. A composição muda por largura de tela; não usa detecção de aparelho nem páginas duplicadas.
 
 `assets/js/mobile.js` começa em português e oferece um botão acima do cartão com a bandeira americana para inglês. Ao mostrar inglês, oferece a bandeira brasileira para voltar ao português. O cartão fora de uso fica oculto inclusive para teclado e leitores de tela. No computador, ambos voltam a aparecer lado a lado. Sem JavaScript, os dois ficam disponíveis como alternativa.

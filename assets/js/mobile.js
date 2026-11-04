@@ -23,3 +23,38 @@
   mobile.addEventListener('change', () => update());
   update();
 })();
+
+/* A barra entra somente depois que o hero sai da área visível. */
+(() => {
+  const hero = document.querySelector('#inicio');
+  const bar = document.querySelector('.sticky-mobile-bar');
+  if (!hero || !bar) return;
+  const mobile = window.matchMedia('(max-width: 760px)');
+  const header = document.querySelector('.header');
+
+  function updateBar() {
+    const headerHeight = header?.getBoundingClientRect().height || 0;
+    const visible = mobile.matches && hero.getBoundingClientRect().bottom <= headerHeight;
+    bar.classList.toggle('is-visible', visible);
+    bar.inert = !visible;
+    bar.setAttribute('aria-hidden', String(!visible));
+  }
+
+  updateBar();
+  mobile.addEventListener('change', updateBar);
+  window.addEventListener('pageshow', updateBar);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(updateBar, {
+      threshold: 0,
+      rootMargin: '-68px 0px 0px 0px'
+    }).observe(hero);
+  } else {
+    let frame = 0;
+    function schedule() {
+      if (frame) return;
+      frame = requestAnimationFrame(() => { frame = 0; updateBar(); });
+    }
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+  }
+})();
