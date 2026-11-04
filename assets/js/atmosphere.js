@@ -149,6 +149,7 @@
         compositeUrl = URL.createObjectURL(blob);
         smoke.style.backgroundImage = `url("${compositeUrl}")`;
         smoke.classList.add('smoke-rasterized');
+        updateMotion();
         if (previous) URL.revokeObjectURL(previous);
       }, 'image/webp', .85);
     });
@@ -286,9 +287,11 @@
   document.fonts?.ready.then(schedulePosition);
   window.addEventListener('load', schedulePosition, { once: true });
 
-  let inView = true;
+  let inView = true, scrolling = false, scrollTimer;
   function updateMotion() {
-    const running = textureReady && !firefox && inView && !document.hidden && document.documentElement.dataset.motionPaused !== 'true';
+    const allowed = textureReady && inView && !document.hidden && document.documentElement.dataset.motionPaused !== 'true';
+    const running = allowed && !firefox;
+    smoke.classList.toggle('smoke-idle-motion', firefox && allowed && !scrolling && smoke.classList.contains('smoke-rasterized'));
     flow.classList.toggle('atmosphere-in-view', running);
     // Keep the complete atmosphere, but only animate two visible textures.
     // The remaining plumes stay static instead of allocating more animated layers.
@@ -307,6 +310,18 @@
   }
   document.addEventListener('visibilitychange', updateMotion);
   document.addEventListener('motionpreferencechange', updateMotion);
+  if (firefox) {
+    function pauseDuringScroll() {
+      if (!scrolling) { scrolling = true; updateMotion(); }
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => { scrolling = false; updateMotion(); }, 280);
+    }
+    window.addEventListener('wheel', pauseDuringScroll, { passive: true });
+    window.addEventListener('scroll', pauseDuringScroll, { passive: true });
+    window.addEventListener('keydown', event => {
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) pauseDuringScroll();
+    });
+  }
   updateMotion();
   prepareTexture();
   prepareBackdrop();

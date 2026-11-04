@@ -40,6 +40,20 @@
 .leadership-smoke.smoke-texture-unavailable { display: none; }
 .leadership-smoke.smoke-rasterized { background-size: 100% 100%; background-repeat: no-repeat; }
 .leadership-smoke.smoke-rasterized img { visibility: hidden; }
+.leadership-smoke.smoke-idle-motion::after {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  background-image: inherit;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: smoke-idle-drift 14s linear -4s infinite alternate;
+  pointer-events: none;
+}
+@keyframes smoke-idle-drift {
+  from { transform: translate(-12px, 8px); }
+  to { transform: translate(12px, -8px); }
+}
 .atmosphere-in-view .leadership-smoke img.smoke-animating { animation: var(--smoke-animation); animation-play-state: running; }
 .leadership-smoke img.smoke-animating { will-change: transform; }
 .leadership-top-header { max-width: 920px; margin-bottom: 2rem; }
@@ -122,6 +136,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .leadership-smoke.smoke-idle-motion::after { display: none; animation: none; }
   .leadership-smoke img,
   .leadership-smoke .smoke-plume--upper,
   .leadership-smoke .smoke-plume--lower,
