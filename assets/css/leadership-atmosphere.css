@@ -26,15 +26,21 @@
   contain: paint;
 }
 .leadership-smoke img {
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 76%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 76%, transparent);
+  /* Color and edge fading are already baked into the shared texture. */
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
-.leadership-smoke img { position: absolute; width: 112%; max-width: none; height: auto; left: -10%; top: var(--smoke-focus-y, 280px); opacity: .13; filter: invert(1) brightness(.8); animation: leadership-smoke-drift 24s ease-in-out infinite alternate; animation-play-state: paused; will-change: auto; }
-.leadership-smoke .smoke-plume--upper { width: 110%; left: -6%; top: -50px; opacity: .12; filter: invert(1) brightness(.8); animation: leadership-smoke-return 29s ease-in-out -12s infinite alternate; animation-play-state: paused; }
-.leadership-smoke .smoke-plume--lower { width: 105%; left: 12%; top: calc(var(--smoke-leadership-end, 1200px) - 420px); opacity: .095; animation: leadership-smoke-return 32s ease-in-out -18s infinite alternate; animation-play-state: paused; }
+.leadership-smoke img { position: absolute; width: 112%; max-width: none; height: auto; left: -10%; top: var(--smoke-focus-y, 280px); opacity: .13; --smoke-animation: leadership-smoke-drift 24s ease-in-out infinite alternate; animation: none; animation-play-state: paused; will-change: auto; }
+.leadership-smoke .smoke-plume--upper { width: 110%; left: -6%; top: -50px; opacity: .12; --smoke-animation: leadership-smoke-return 29s ease-in-out -12s infinite alternate; animation: none; animation-play-state: paused; }
+.leadership-smoke .smoke-plume--lower { width: 105%; left: 12%; top: calc(var(--smoke-leadership-end, 1200px) - 420px); opacity: .095; --smoke-animation: leadership-smoke-return 32s ease-in-out -18s infinite alternate; animation: none; animation-play-state: paused; }
 .smoke-trails { position: absolute; inset: 0; pointer-events: none; }
-.leadership-smoke .smoke-plume--trail { width: 140%; left: var(--trail-x, -15%); top: var(--trail-y, 1000px); opacity: var(--trail-opacity, .05); filter: invert(1) brightness(.8); animation: leadership-smoke-drift var(--trail-duration, 34s) ease-in-out var(--trail-delay, -8s) infinite alternate; animation-play-state: paused; }
-.atmosphere-in-view .leadership-smoke img.smoke-animating { animation-play-state: running; }
+.leadership-smoke .smoke-plume--trail { width: 140%; left: var(--trail-x, -15%); top: var(--trail-y, 1000px); opacity: var(--trail-opacity, .05); --smoke-animation: leadership-smoke-drift var(--trail-duration, 34s) ease-in-out var(--trail-delay, -8s) infinite alternate; animation: none; animation-play-state: paused; }
+.leadership-smoke:not(.smoke-texture-ready) { visibility: hidden; }
+.leadership-smoke.smoke-texture-unavailable { display: none; }
+.leadership-smoke.smoke-rasterized { background-size: 100% 100%; background-repeat: no-repeat; }
+.leadership-smoke.smoke-rasterized img { visibility: hidden; }
+.atmosphere-in-view .leadership-smoke img.smoke-animating { animation: var(--smoke-animation); animation-play-state: running; }
 .leadership-smoke img.smoke-animating { will-change: transform; }
 .leadership-top-header { max-width: 920px; margin-bottom: 2rem; }
 .section-leadership .section-title { font-size: clamp(2rem, 3.4vw, 3.2rem); color: var(--text-on-wood); }
@@ -120,7 +126,28 @@
   .leadership-smoke .smoke-plume--upper,
   .leadership-smoke .smoke-plume--lower,
   .leadership-smoke .smoke-plume--trail { animation: none; will-change: auto; }
+  .atmosphere-in-view .leadership-smoke img.smoke-animating { animation: none; will-change: auto; }
   .section-leadership .mosaic-item, .section-leadership .mosaic-img { transition: none; }
 }
 
 .author-monogram { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--color-wood); color: var(--text-on-wood); border: 1px solid var(--color-gold-border); font: 600 1.65rem/1 var(--font-serif); }
+
+@supports (-moz-appearance: none) {
+  .section-leadership .mosaic-item,
+  .section-leadership .mosaic-item:hover,
+  .section-leadership .mosaic-item.active {
+    filter: none;
+    opacity: 1;
+    will-change: auto;
+    transition: none;
+  }
+  .section-mini-hero { background-attachment: scroll; }
+  .section-leadership .mosaic-rasterized .mosaic-item { visibility: hidden; }
+  .mosaic-cached-image { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .journey-backdrop img.journey-backdrop-ready {
+    filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+    opacity: 1;
+  }
+}

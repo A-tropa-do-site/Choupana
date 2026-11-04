@@ -77,3 +77,7 @@ Mosaico: 24 imagens distintas, sem reutilizar as quatro fotos da galeria. As ver
 A galeria passou de batidas para sobremesas porque o lote não contém uma foto limpa de batidas. A menção às batidas na história e nos cardápios permanece. O retrato genérico da assinatura foi retirado em favor de um monograma. As fotografias antigas não devem ser atribuídas à aparência atual de reformas ou à equipe atual. Ilustrações, logotipos, textura de madeira e fumaça foram preservados.
 
 A abertura agora começa com a mesma fachada da chamada final, por solicitação do usuário, seguida das três imagens de carnes. O intervalo entre imagens é de 3,5 segundos. Os cartões de pizza e sobremesa preenchem a área quadrada com foco individual, sem faixas laterais. As demais fotografias continuam sem repetição entre seções.
+
+## Desempenho no Firefox de computador
+
+A textura de fumaça recebe cor e transparência uma vez em canvas, compartilhando uma imagem preparada, sem filtros e máscaras ativos na rolagem. No Firefox com largura inicial acima de 760 px, a fumaça é pré-composta com o fundo em uma imagem estática; a foto lateral recebe seu acabamento antecipadamente e o mosaico mantém os 24 recortes em um canvas, redesenhado apenas ao mudar de tamanho. O parallax da chamada final fica desativado nesse navegador. Edge e os demais navegadores mantêm a fumaça animada, com até duas camadas simultâneas. Em falha do preparo, o conteúdo permanece acessível. Testar no Firefox real, além do Edge; limitar camadas não foi suficiente para corrigir o custo das máscaras e filtros no Firefox.
