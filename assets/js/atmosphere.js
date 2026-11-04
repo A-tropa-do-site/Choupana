@@ -11,7 +11,7 @@
   const trails = document.createElement('div');
   trails.className = 'smoke-trails';
   smoke.append(trails);
-  let textureUrl = source.getAttribute('src');
+  let textureUrl = source.getAttribute('src').replace(/\.webp(?=$|\?)/, '.png');
   let textureReady = false;
   const firefox = /Firefox\//.test(navigator.userAgent) && window.innerWidth > 760;
   let preparedImage, compositeFrame = 0, compositeRevision = 0, compositeUrl;
@@ -90,9 +90,6 @@
       canvas.height = Math.ceil(rect.height * scale);
       const context = canvas.getContext('2d');
       if (!context) return;
-      const color = getComputedStyle(flow).backgroundColor;
-      context.fillStyle = color;
-      context.fillRect(0, 0, canvas.width, canvas.height);
       const fit = Math.max(canvas.width / original.naturalWidth, canvas.height / original.naturalHeight);
       context.globalAlpha = .28;
       context.filter = 'saturate(.65)';
@@ -101,19 +98,20 @@
         original.naturalWidth * fit, original.naturalHeight * fit);
       context.filter = 'none';
       context.globalAlpha = 1;
+      context.globalCompositeOperation = 'destination-in';
       const left = context.createLinearGradient(0, 0, canvas.width, 0);
-      left.addColorStop(0, color);
-      left.addColorStop(.35, 'transparent');
+      left.addColorStop(0, 'transparent');
+      left.addColorStop(.35, '#000');
       context.fillStyle = left;
       context.fillRect(0, 0, canvas.width, canvas.height);
       const edges = context.createLinearGradient(0, 0, 0, canvas.height);
-      edges.addColorStop(0, color);
-      edges.addColorStop(.1, 'transparent');
-      edges.addColorStop(.85, 'transparent');
-      edges.addColorStop(1, color);
+      edges.addColorStop(0, 'transparent');
+      edges.addColorStop(.1, '#000');
+      edges.addColorStop(.85, '#000');
+      edges.addColorStop(1, 'transparent');
       context.fillStyle = edges;
       context.fillRect(0, 0, canvas.width, canvas.height);
-      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', .88));
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) return;
       backdrop.src = URL.createObjectURL(blob);
       backdrop.classList.add('journey-backdrop-ready');
@@ -129,7 +127,8 @@
       const revision = ++compositeRevision;
       const bounds = smoke.getBoundingClientRect();
       if (!bounds.width || !bounds.height) return;
-      const scale = Math.min(1, 960 / bounds.width, 4096 / bounds.height);
+      const scale = Math.min(window.devicePixelRatio || 1, 2560 / bounds.width,
+        6144 / bounds.height, Math.sqrt(8000000 / (bounds.width * bounds.height)));
       const canvas = document.createElement('canvas');
       canvas.width = Math.ceil(bounds.width * scale);
       canvas.height = Math.ceil(bounds.height * scale);
@@ -151,7 +150,7 @@
         smoke.classList.add('smoke-rasterized');
         updateMotion();
         if (previous) URL.revokeObjectURL(previous);
-      }, 'image/webp', .85);
+      }, 'image/png');
     });
   }
 
@@ -164,7 +163,7 @@
       original.src = textureUrl;
       await original.decode();
       const canvas = document.createElement('canvas');
-      canvas.width = Math.min(960, original.naturalWidth);
+      canvas.width = original.naturalWidth;
       canvas.height = Math.round(canvas.width * original.naturalHeight / original.naturalWidth);
       const context = canvas.getContext('2d');
       if (!context) throw new Error('Canvas unavailable');
@@ -184,7 +183,7 @@
       context.globalCompositeOperation = 'destination-in';
       context.fillStyle = fade;
       context.fillRect(0, 0, canvas.width, canvas.height);
-      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', .85));
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('Texture unavailable');
       textureUrl = URL.createObjectURL(blob);
       const ready = new Image();
@@ -208,7 +207,6 @@
       else visiblePlumes.delete(entry.target);
     });
     updateMotion();
-    scheduleComposite();
   }, { rootMargin: '150px' }) : null;
   smoke.querySelectorAll('img').forEach(image => {
     if (plumeObserver) plumeObserver.observe(image);
@@ -266,6 +264,7 @@
       plume.style.setProperty('--trail-delay', `${index * -7}s`);
     });
     updateMotion();
+    scheduleComposite();
   }
 
   let layoutFrame = 0;
